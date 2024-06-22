@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class listscreen extends StatefulWidget {
-  const listscreen({super.key});
+class ListScreen extends StatefulWidget {
+  const ListScreen({super.key});
 
   @override
-  State<listscreen> createState() => __listscreenStateState();
+  State<ListScreen> createState() => __ListScreenStateState();
 }
 
-class __listscreenStateState extends State<listscreen> {
+class __ListScreenStateState extends State<ListScreen> {
   int _quantity = 1;
 
   void _incrementQuantity() {
@@ -26,8 +26,22 @@ class __listscreenStateState extends State<listscreen> {
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
-        title: const Text("WhatApp screen"),
+        title: const Text("WhatApp"),
         backgroundColor: Colors.greenAccent,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.qr_code_2_outlined),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.camera_alt_outlined),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu_open_outlined),
+          )
+        ],
       ),
       body: ListView.builder(
         shrinkWrap: true,
