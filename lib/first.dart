@@ -26,12 +26,12 @@ class __ListScreenStateState extends State<ListScreen> {
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
-        title: const Text("WhatApp"),
+        title: const Text("WhatsApp"),
         backgroundColor: Colors.greenAccent,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.qr_code_2_outlined),
+            icon: Icon(Icons.qr_code_scanner_outlined),
           ),
           IconButton(
             onPressed: () {},
@@ -39,7 +39,7 @@ class __ListScreenStateState extends State<ListScreen> {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu_open_outlined),
+            icon: Icon(Icons.more_vert_outlined),
           )
         ],
       ),
