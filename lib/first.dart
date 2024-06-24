@@ -26,8 +26,10 @@ class __ListScreenStateState extends State<ListScreen> {
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
-        title: const Text("WhatsApp"),
-        backgroundColor: Colors.greenAccent,
+        title: const Text(
+          "WhatsApp",
+          style: TextStyle(color: Color.fromARGB(255, 56, 170, 115)),
+        ),
         actions: [
           IconButton(
             onPressed: () {},
@@ -43,36 +45,43 @@ class __ListScreenStateState extends State<ListScreen> {
           )
         ],
       ),
-      body: ListView.builder(
-        shrinkWrap: true,
-        itemCount: _quantity,
-        itemBuilder: (context, index) {
-          const column = Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Preson name"),
-              Text("message and calls"),
-            ],
-          );
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: MediaQuery.of(context).size.width * 0.035,
-                  backgroundImage: const NetworkImage(
-                      "https://th.bing.com/th/id/OIP.bmuzJ3FVRklBY5KvYFqw9wHaEK?rs=1&pid=ImgDetMain"),
+      body: Column(
+        children: [
+          // TextField(
+          //
+          // ),
+          ListView.builder(
+            shrinkWrap: true,
+            itemCount: _quantity,
+            itemBuilder: (context, index) {
+              const column = Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Preson name"),
+                  Text("message and calls"),
+                ],
+              );
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: MediaQuery.of(context).size.width * 0.035,
+                      backgroundImage: const NetworkImage(
+                          "https://th.bing.com/th/id/OIP.bmuzJ3FVRklBY5KvYFqw9wHaEK?rs=1&pid=ImgDetMain"),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: column,
+                    ),
+                    const Spacer(),
+                    const Text("Date"),
+                  ],
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: column,
-                ),
-                const Spacer(),
-                const Text("Date"),
-              ],
-            ),
-          );
-        },
+              );
+            },
+          ),
+        ],
       ),
     );
   }

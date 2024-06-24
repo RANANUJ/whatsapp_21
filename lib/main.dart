@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:whatsapp_21/chat.dart';
 import 'package:whatsapp_21/first.dart';
 
 void main() {
@@ -10,6 +12,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: ListScreen());
+    return const MaterialApp(home: TextDisplayScreen());
   }
 }
